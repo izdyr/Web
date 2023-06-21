@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Art Generator</title>
+</head>
+
+<body>
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+          <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+          <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+          <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+        </div>
+      </div>
+    <div class="wrapper">
+        <div class="container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <button id="btn">Generate</button>
+    </div>
+
+
+    <script>const btn = document.getElementById("btn");
+        const shapes = [
+            "quad-circle-1",
+            "quad-circle-2",
+            "quad-circle-3",
+            "quad-circle-4",
+            "triangle-1",
+            "triangle-2",
+            "triangle-3",
+            "triangle-4",
+            "circle",
+        ];
+        
+        const colors = ["#01d2fd", "#ffc700", "#fe9f12", "#06d0c7", "#ffaebc", "#a0e7e5", "#b4f8c8", "fbe7c6", "#05445E", "#189AB4", "#75E6DA", "#D4F1F4", "#3D550C", "#81B622", "#59981A", "#DDFFE7", "#98D7C2", "#167D7F", "#29A0B1", "#90ADC6", "#E9EAEC", "#FAD02C", "#333652", "#D3B1C2", "#C197D2", "#211522", "#613659"];
+        const boxes = document.querySelectorAll(".container div");
+        
+        let generatePattern = () => {
+            boxes.forEach((box) => {
+                box.className = "";
+                let i = Math.floor(Math.random() * shapes.length);
+                let j = Math.floor(Math.random() * colors.length);
+                box.classList.add(shapes[i]);
+                box.style.backgroundColor = colors[j];
+            });
+        };
+        
+        btn.addEventListener("click", generatePattern);
+        window.addEventListener("load", generatePattern);</script>
+</body>
+
+</html>
