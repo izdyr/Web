@@ -43,9 +43,9 @@ const chatLog = document.getElementById('chat-log'),
 const options = {
 	method: 'POST',
 	headers: {
-		'content-type': 'application/json',
-		'X-RapidAPI-Key': 'd2feda93abmsh4a520f0daf16bb0p1d3da7jsnbf0c38f6c722',
-		'X-RapidAPI-Host': 'chatgpt53.p.rapidapi.com'
+		'content-type': 'RAPID API_KEY',
+		'X-RapidAPI-Key': 'RAPID API_KEY',
+		'X-RapidAPI-Host': 'RAPID API_KEY'
 	},
                 body: `{"messages":[{"role":"user","content":"${message}"}]}`
                 // if you want use official api you need have this body
