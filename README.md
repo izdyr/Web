@@ -2,7 +2,7 @@
 
 **Hello World!**
 
-In this section, I have put my small projects for HTML.
+In this section, I have put my small projects for Web.
 These designs are designed using CSS and some of them are coded with java script.
 
 I hope they were helpful.
